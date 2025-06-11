@@ -3,13 +3,15 @@
 namespace App\Livewire;
 
 use App\Models\Post;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class PostList extends Component
 {
     // public $posts;
-
-    public function delete(Post $post) {
+//    #[On('deleted')]
+    public function delete($id) {
+        $post = Post::findOrFail($id);
         $post->delete();
         // $this->posts = Post::all();
     }

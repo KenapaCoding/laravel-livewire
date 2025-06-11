@@ -13,6 +13,10 @@ class PostItem extends Component
         $this->post = $post;
     }
 
+    public function delete(){
+        $this->dispatch('deleted',id:$this->post->id);
+    }
+
     public function render()
     {
         return view('livewire.post-item');

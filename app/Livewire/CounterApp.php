@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -12,6 +13,7 @@ class CounterApp extends Component
 
     public $panggilan = 'Boy';
 
+    #[On('incremented')]
     public function increase($num) {
         $this->count = $this->count + $num;
     }

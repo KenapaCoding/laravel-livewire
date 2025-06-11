@@ -16,5 +16,6 @@
         {{-- @livewire('counter-app') --}}
 
         <livewire:counter-app/>
+        <livewire:components.button/>
     </body>
 </html>
