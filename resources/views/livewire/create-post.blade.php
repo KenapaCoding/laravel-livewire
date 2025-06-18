@@ -11,6 +11,9 @@
                 name="title"
                 class="p-2 mt-0.5 w-full rounded border-1 border-gray-500 shadow-sm sm:text-sm"
             />
+            @error('title')
+                <div class="text-red-500">{{$message}}</div>
+            @enderror
         </label>
         <label for="content">
             <span class="text-sm font-medium text-gray-700"> Content </span>
@@ -22,6 +25,9 @@
                 class="p-2 mt-0.5 w-full resize-none rounded border-gray-500 border-1 shadow-sm sm:text-sm"
                 rows="4"
             ></textarea>
+            @error('content')
+                <div class="text-red-500">{{$message}}</div>
+            @enderror
         </label>
         <div>
             <button
